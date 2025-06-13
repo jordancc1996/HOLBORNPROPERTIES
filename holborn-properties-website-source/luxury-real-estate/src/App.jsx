@@ -160,10 +160,10 @@ function App() {
           <h2 className="text-3xl font-light text-center mb-12 text-gray-800">As Seen In</h2>
           <div className="flex justify-center items-center space-x-12 opacity-60">
             <div className="text-2xl font-bold text-gray-600">GQ</div>
-            <div className="text-2xl font-bold text-gray-600">HOUSE & GARDEN</div>
+            <div className="text-2xl font-bold text-gray-600">ARCHITECTURAL DIGEST</div>
             <div className="text-2xl font-bold text-gray-600">INTERNATIONAL PROPERTY & TRAVEL</div>
             <div className="text-2xl font-bold text-gray-600">TATLER</div>
-            <div className="text-2xl font-bold text-gray-600">rightmove</div>
+            <div className="text-2xl font-bold text-gray-600">FINANCIAL TIMES</div>
           </div>
         </div>
       </section>
