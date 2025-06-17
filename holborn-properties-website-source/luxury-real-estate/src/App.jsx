@@ -237,22 +237,105 @@ function App() {
               </ul>
             </div>
             <div>
-              <h4 className="text-lg font-semibold mb-4">Contact Information</h4>
-              <div className="space-y-2 text-gray-300">
-                <div className="flex items-center">
-                  <Phone className="w-4 h-4 mr-2 text-green-400" />
-                  <span>USA: +1 239 326 2111</span>
-                </div>
-                <div className="flex items-center">
-                  <Phone className="w-4 h-4 mr-2 text-green-400" />
-                  <span>UK: +44 (0)161 250 5300</span>
-                </div>
-                <div className="flex items-center">
-                  <Mail className="w-4 h-4 mr-2 text-green-400" />
-                  <span>info@luxuryinternational.com</span>
-                </div>
-              </div>
-            </div>
+           <div>                                       
+<h4 className="text-lg font-semibold mb-4">Contact Us</h4>
+<form 
+  action="https://formspree.io/f/xblykgln" 
+  method="POST"
+  className="space-y-3"
+>
+  <div>
+    <input 
+      type="text" 
+      name="name"
+      placeholder="Your Name *"
+      required
+      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
+    />
+  </div>
+  
+  <div>
+    <input 
+      type="email" 
+      name="email"
+      placeholder="Your Email *"
+      required
+      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
+    />
+  </div>
+  
+  <div>
+    <input 
+      type="tel" 
+      name="phone"
+      placeholder="Phone Number"
+      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
+    />
+  </div>
+
+  <div>
+    <select 
+      name="propertyInterest"
+      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
+    >
+      <option value="">I'm interested in...</option>
+      <option value="buying">Buying a Luxury Property</option>
+      <option value="selling">Selling My Property</option>
+      <option value="investing">Investment Opportunities</option>
+      <option value="consultation">General Consultation</option>
+    </select>
+  </div>
+
+  <div>
+    <select 
+      name="budgetRange"
+      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
+    >
+      <option value="">Budget Range (Optional)</option>
+      <option value="under-1m">Under $1M</option>
+      <option value="1m-5m">$1M - $5M</option>
+      <option value="5m-10m">$5M - $10M</option>
+      <option value="10m-25m">$10M - $25M</option>
+      <option value="25m-plus">$25M+</option>
+    </select>
+  </div>
+
+  <div>
+    <select 
+      name="preferredLocation"
+      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
+    >
+      <option value="">Preferred Location</option>
+      <option value="usa">United States</option>
+      <option value="uk">United Kingdom</option>
+      <option value="france">France</option>
+      <option value="uae">UAE/Dubai</option>
+      <option value="singapore">Singapore</option>
+      <option value="other">Other Location</option>
+    </select>
+  </div>
+
+  <div>
+    <select 
+      name="timeline"
+      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
+    >
+      <option value="">Purchase Timeline</option>
+      <option value="immediate">Ready to purchase now</option>
+      <option value="3months">Within 3 months</option>
+      <option value="6months">Within 6 months</option>
+      <option value="1year">Within 1 year</option>
+      <option value="exploring">Just exploring options</option>
+    </select>
+  </div>
+  
+  <div>
+    <textarea 
+      name="message"
+      rows="2"
+      placeholder="Additional details or specific requirements..."
+      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm resize-vertical"
+    ></textarea>
           </div>
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
             <p>&copy; 2025 Holborn Properties International. All rights reserved.</p>
