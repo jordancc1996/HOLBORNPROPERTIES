@@ -209,6 +209,13 @@ function App() {
           </div>
         </div>
       </section>
+                    <div>
+                  <form 
+                    action="https://formspree.io/f/xblykgln" 
+                    method="POST"
+                    className="flex flex-col sm:flex-row gap-4"
+                  >
+                    <input 
                       type="email" 
                       name="email"
                       placeholder="Enter your email here"
@@ -218,6 +225,13 @@ function App() {
                     <input type="hidden" name="_subject" value="New Property Newsletter Signup" />
                     <button 
                       type="submit"
+                      className="bg-gray-700 hover:bg-gray-800 text-white px-8 py-3 rounded-lg transition-colors font-medium"
+                    >
+                      SUBSCRIBE
+                      <ChevronRight className="ml-2 w-4 h-4 inline" />
+                    </button>
+                  </form>
+                </div>
                       className="bg-gray-700 hover:bg-gray-800 text-white px-8 py-3 rounded-lg transition-colors font-medium"
                     >
                       SUBSCRIBE
