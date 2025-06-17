@@ -168,7 +168,7 @@ function App() {
         </div>
       </section>
 {/* Email Subscription Section */}
-      <section className="py-16 bg-green-50">
+     <section className="py-16 bg-green-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-lg shadow-lg p-8 md:p-12">
@@ -181,13 +181,34 @@ function App() {
                     Be the first to know about exclusive luxury properties, market insights, and investment opportunities.
                   </p>
                 </div>
-          <div>
+                <div>
                   <form 
                     action="https://formspree.io/f/xblykgln" 
                     method="POST"
                     className="flex flex-col sm:flex-row gap-4"
                   >
                     <input 
+                      type="email" 
+                      name="email"
+                      placeholder="Enter your email here"
+                      required
+                      className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    />
+                    <input type="hidden" name="_subject" value="New Property Newsletter Signup" />
+                    <button 
+                      type="submit"
+                      className="bg-gray-700 hover:bg-gray-800 text-white px-8 py-3 rounded-lg transition-colors font-medium"
+                    >
+                      SUBSCRIBE
+                      <ChevronRight className="ml-2 w-4 h-4 inline" />
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
                       type="email" 
                       name="email"
                       placeholder="Enter your email here"
