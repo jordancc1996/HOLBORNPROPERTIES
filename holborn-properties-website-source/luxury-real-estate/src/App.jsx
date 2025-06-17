@@ -16,14 +16,14 @@ function App() {
           <div className="flex justify-between items-center py-2 text-sm border-b">
             <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-2">
-                <div className="bg-blue-600 text-white px-2 py-1 rounded text-xs">USA OFFICE</div>
+                <div className="bg-blue-600 text-white px-2 py-1 rounded text-xs">NEW YORK OFFICE </div>
                 <Phone className="w-4 h-4 text-blue-600" />
-                <span>+1 239 326 2111</span>
+                <span>+1 215 252 0312</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="bg-orange-500 text-white px-2 py-1 rounded text-xs">UK OFFICE</div>
                 <Phone className="w-4 h-4 text-orange-500" />
-                <span>+44 (0)161 250 5300</span>
+                <span> +1 215 252 0312 </span>
               </div>
             </div>
             <div className="text-sm">EN</div>
