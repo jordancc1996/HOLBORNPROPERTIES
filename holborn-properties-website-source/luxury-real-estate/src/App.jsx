@@ -167,7 +167,38 @@ function App() {
           </div>
         </div>
       </section>
-
+{/* Email Subscription Section */}
+      <section className="py-16 bg-green-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-lg shadow-lg p-8 md:p-12">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h2 className="text-3xl font-light mb-4 text-gray-800">
+                    Let us keep you updated with the latest properties on the market.
+                  </h2>
+                  <p className="text-gray-600">
+                    Be the first to know about exclusive luxury properties, market insights, and investment opportunities.
+                  </p>
+                </div>
+                <div>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <input 
+                      type="email" 
+                      placeholder="Enter your email here"
+                      className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    />
+                    <button className="bg-gray-700 hover:bg-gray-800 text-white px-8 py-3 rounded-lg transition-colors font-medium">
+                      SUBSCRIBE
+                      <ChevronRight className="ml-2 w-4 h-4 inline" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
