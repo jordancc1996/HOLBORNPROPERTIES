@@ -335,16 +335,26 @@ function App() {
       rows="2"
       placeholder="Additional details or specific requirements..."
       className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm resize-vertical"
-    ></textarea>
-          </div>
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 Holborn Properties International. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
-}
+   ></textarea>
+  </div>
 
-export default App;
+  <input type="hidden" name="_subject" value="New Qualified Lead - Holborn Properties" />
+  <input type="hidden" name="_replyto" value="email" />
+  
+  <button 
+    type="submit"
+    className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded transition-colors font-medium text-sm"
+  >
+    Send Message
+  </button>
+</form>
 
+<div className="mt-4 pt-4 border-t border-gray-700">
+  <h5 className="text-sm font-semibold mb-2 text-green-400">Contact Details</h5>
+  <div className="space-y-1 text-xs text-gray-400">
+    <div>USA: +1 239 326 2111</div>
+    <div>UK: +44 (0)161 250 5300</div>
+    <div>info@luxuryinternational.com</div>
+  </div>
+</div>
+</div>
