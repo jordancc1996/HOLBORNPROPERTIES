@@ -371,16 +371,4 @@ function HomePage() {
   );
 }
 
-// MAIN APP COMPONENT WITH ROUTING
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/portfolio" element={<FullPortfolioPage />} />
-      </Routes>
-    </Router>
-  );
-}
 
-export default App;
