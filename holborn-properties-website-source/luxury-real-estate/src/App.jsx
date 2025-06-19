@@ -4,15 +4,8 @@ import eiffelTower from './assets/eiffel-tower.jpg';
 import burjKhalifa from './assets/burj-khalifa.jpg';
 import tajMahal from './assets/taj-mahal.jpg';
 import holbornLogo from './assets/holborn-properties-logo.png';
-import React from 'react';
-import './App.css';
-import eiffelTower from './assets/eiffel-tower.jpg';
-import burjKhalifa from './assets/burj-khalifa.jpg';
-import tajMahal from './assets/taj-mahal.jpg';
-import holbornLogo from './assets/holborn-properties-logo.png';
 import { Phone, Mail, MapPin, ChevronRight } from 'lucide-react';
-import Portfolio from './components/ui/portfolio'; // ADD THIS LINE
-import { Phone, Mail, MapPin, ChevronRight } from 'lucide-react';
+import Portfolio from './components/ui/portfolio';
 
 function App() {
   return (
