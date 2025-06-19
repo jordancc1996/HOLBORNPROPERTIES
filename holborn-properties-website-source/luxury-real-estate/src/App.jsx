@@ -38,11 +38,11 @@ function HomePage() {
             <a href="#" className="text-2xl font-bold text-green-600">
               <img src={holbornLogo} alt="Holborn Properties Logo" className="h-12" />
             </a>
-            <div className="flex space-x-8">
-            <a href="#" className="text-gray-700 hover:text-green-600 transition-colors">Home</a>
-            <a href="#" className="text-gray-700 hover:text-green-600 transition-colors">About Us</a>
-            <a href="#portfolio" className="text-gray-700 hover:text-green-600 transition-colors">Portfolio</a>
-            <a href="#" className="text-gray-700 hover:text-green-600 transition-colors">Partners</a>
+            <div className="flex space-x-8 gap-8">
+            <a href="#" className="text-gray-700 hover:text-green-600 transition-colors mr-8">Home</a>
+            <a href="#" className="text-gray-700 hover:text-green-600 transition-colors mr-8">About Us</a>
+            <a href="#portfolio" className="text-gray-700 hover:text-green-600 transition-colors mr-8">Portfolio</a>
+            <a href="#" className="text-gray-700 hover:text-green-600 transition-colors mr-8">Partners</a>
             <a href="#" className="text-gray-700 hover:text-green-600 transition-colors">Contact</a>
             </div>
           </nav>
