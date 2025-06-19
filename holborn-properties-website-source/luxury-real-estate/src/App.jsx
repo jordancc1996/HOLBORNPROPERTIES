@@ -227,15 +227,6 @@ function HomePage() {
         </div>
       </section>
 
-                
-                <p className="text-sm text-gray-500 text-center mt-6">
-                  We respect your privacy. Unsubscribe at any time.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
