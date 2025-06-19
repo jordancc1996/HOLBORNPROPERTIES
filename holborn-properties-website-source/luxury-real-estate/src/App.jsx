@@ -166,63 +166,78 @@ function HomePage() {
         </div>
       </section>
 
-      {/* As Seen In Section */}
+      {/* As Seen In Section - FIXED VERSION */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-light text-center mb-12 text-gray-800">As Seen In</h2>
-          <div className="flex justify-center items-center space-x-12 opacity-60">
-            <div className="text-2xl font-bold text-gray-600">GQ</div>
-            <div className="text-2xl font-bold text-gray-600">ARCHITECTURAL DIGEST</div>
-            <div className="text-2xl font-bold text-gray-600">INTERNATIONAL PROPERTY & TRAVEL</div>
-            <div className="text-2xl font-bold text-gray-600">TATLER</div>
-            <div className="text-2xl font-bold text-gray-600">FINANCIAL TIMES</div>
-          </div>
-        </div>
-      </section>
-
-      {/* Email Subscription Section */}
-      <section className="py-16 bg-green-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-lg shadow-lg p-8 md:p-12">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                  <h2 className="text-3xl font-light mb-4 text-gray-800">
-                    Let us keep you updated with the latest properties on the market.
-                  </h2>
-                  <p className="text-gray-600">
-                    Be the first to know about exclusive luxury properties, market insights, and investment opportunities.
-                  </p>
-                </div>
-                <div>
-                  <form 
-                    action="https://formspree.io/f/xblykgln" 
-                    method="POST"
-                    className="flex flex-col sm:flex-row gap-4"
-                  >
-                    <input 
-                      type="email" 
-                      name="email"
-                      placeholder="Enter your email here"
-                      required
-                      className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
-                    />
-                    <input type="hidden" name="_subject" value="New Property Newsletter Signup" />
-                    <button 
-                      type="submit"
-                      className="bg-gray-700 hover:bg-gray-800 text-white px-8 py-3 rounded-lg transition-colors font-medium"
-                    >
-                      SUBSCRIBE
-                      <ChevronRight className="ml-2 w-4 h-4 inline" />
-                    </button>
-                  </form>
-                </div>
-              </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center max-w-6xl mx-auto">
+            <div className="text-lg md:text-xl font-bold text-gray-500 hover:text-gray-700 transition-colors text-center">
+              GQ
+            </div>
+            <div className="text-sm md:text-base font-bold text-gray-500 hover:text-gray-700 transition-colors text-center leading-tight">
+              ARCHITECTURAL<br />DIGEST
+            </div>
+            <div className="text-xs md:text-sm font-bold text-gray-500 hover:text-gray-700 transition-colors text-center leading-tight">
+              INTERNATIONAL<br />PROPERTY &<br />TRAVEL
+            </div>
+            <div className="text-lg md:text-xl font-bold text-gray-500 hover:text-gray-700 transition-colors text-center">
+              TATLER
+            </div>
+            <div className="text-sm md:text-base font-bold text-gray-500 hover:text-gray-700 transition-colors text-center leading-tight col-span-2 md:col-span-1">
+              FINANCIAL<br />TIMES
             </div>
           </div>
         </div>
       </section>
 
+
+      {/* Email Subscription Section - FIXED VERSION */}
+      <section className="py-20 bg-gradient-to-br from-green-50 to-blue-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-16 border border-gray-100">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl md:text-5xl font-light mb-6 text-gray-800 leading-tight">
+                  Let us keep you updated with the latest properties on the market.
+                </h2>
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                  Be the first to know about exclusive luxury properties, market insights, and investment opportunities from our global portfolio.
+                </p>
+              </div>
+              
+              <div className="max-w-2xl mx-auto">
+                <form 
+                  action="https://formspree.io/f/xblykgln" 
+                  method="POST"
+                  className="flex flex-col sm:flex-row gap-4"
+                >
+                  <div className="flex-1">
+                    <input 
+                      type="email" 
+                      name="email"
+                      placeholder="Enter your email address"
+                      required
+                      className="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all duration-300 text-lg placeholder-gray-400"
+                    />
+                  </div>
+                  <input type="hidden" name="_subject" value="New Property Newsletter Signup" />
+                  <button 
+                    type="submit"
+                    className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-8 py-4 rounded-xl transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center"
+                  >
+                    SUBSCRIBE
+                    <ChevronRight className="ml-2 w-5 h-5" />
+                  </button>
+                </form>
+                
+                <p className="text-sm text-gray-500 text-center mt-6">
+                  We respect your privacy. Unsubscribe at any time.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
