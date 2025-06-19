@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './portfolio.css'; // You'll need to create this CSS file
-
+// import './Portfolio.css'; // You'll need to create this CSS file
 const Portfolio = () => {
   const [properties] = useState([
     {
