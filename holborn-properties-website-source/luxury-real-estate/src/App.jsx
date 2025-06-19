@@ -384,17 +384,7 @@ function HomePage() {
 }
 
 function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/portfolio" element={<FullPortfolioPage />} />
-        <Route path="/about" element={<div>About Page - Coming Soon</div>} />
-        <Route path="/partners" element={<div>Partners Page - Coming Soon</div>} />
-        <Route path="/contact" element={<div>Contact Page - Coming Soon</div>} />
-      </Routes>
-    </Router>
-  );
+  return <HomePage />;
 }
 
 export default App;
