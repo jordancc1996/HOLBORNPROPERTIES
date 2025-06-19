@@ -5,7 +5,7 @@ import burjKhalifa from './assets/burj-khalifa.jpg';
 import tajMahal from './assets/taj-mahal.jpg';
 import holbornLogo from './assets/holborn-properties-logo.png';
 import { Phone, Mail, MapPin, ChevronRight } from 'lucide-react';
-import Portfolio from './components/ui/portfolio';
+import Portfolio from './components/ui/Portfolio.jsx';
 
 function App() {
   return (
