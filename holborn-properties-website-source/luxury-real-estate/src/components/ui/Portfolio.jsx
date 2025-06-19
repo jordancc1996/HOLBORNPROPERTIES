@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Portfolio.css';
 const Portfolio = () => {
   const [properties] = useState([
@@ -145,7 +146,7 @@ const Portfolio = () => {
                     <p className="property-description">{property.description}</p>
                     <div className="property-details">
                       <div className="property-price">{property.price}</div>
-                      <a href={property.link} className="property-link">View Details</a>
+                      <Link to="/portfolio" className="property-link">View Details</Link>
                     </div>
                   </div>
                 </div>
