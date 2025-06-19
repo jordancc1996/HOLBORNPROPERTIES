@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import eiffelTower from './assets/eiffel-tower.jpg';
 import burjKhalifa from './assets/burj-khalifa.jpg';
@@ -6,8 +7,9 @@ import tajMahal from './assets/taj-mahal.jpg';
 import holbornLogo from './assets/holborn-properties-logo.png';
 import { Phone, Mail, MapPin, ChevronRight } from 'lucide-react';
 import Portfolio from './components/ui/Portfolio.jsx';
+import FullPortfolioPage from './components/ui/FullPortfolioPage.jsx';
 
-function App() {
+function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -32,15 +34,15 @@ function App() {
           
           {/* Main navigation */}
           <nav className="flex justify-between items-center py-4">
-            <div className="text-2xl font-bold text-green-600">
+            <Link to="/" className="text-2xl font-bold text-green-600">
               <img src={holbornLogo} alt="Holborn Properties Logo" className="h-12" />
-            </div>
+            </Link>
             <div className="flex space-x-8">
-              <a href="#" className="text-gray-700 hover:text-green-600 transition-colors">Home</a>
-              <a href="#" className="text-gray-700 hover:text-green-600 transition-colors">About Us</a>
-             <a href="#portfolio" className="text-gray-700 hover:text-green-600 transition-colors">Portfolio</a>
-              <a href="#" className="text-gray-700 hover:text-green-600 transition-colors">Partners</a>
-              <a href="#" className="text-gray-700 hover:text-green-600 transition-colors">Contact</a>
+              <Link to="/" className="text-gray-700 hover:text-green-600 transition-colors">Home</Link>
+              <Link to="/about" className="text-gray-700 hover:text-green-600 transition-colors">About Us</Link>
+              <Link to="/portfolio" className="text-gray-700 hover:text-green-600 transition-colors">Portfolio</Link>
+              <Link to="/partners" className="text-gray-700 hover:text-green-600 transition-colors">Partners</Link>
+              <Link to="/contact" className="text-gray-700 hover:text-green-600 transition-colors">Contact</Link>
             </div>
           </nav>
         </div>
@@ -60,10 +62,13 @@ function App() {
             <h1 className="text-5xl md:text-6xl font-light mb-6">
               Established in 2006, <span className="font-bold">Holborn Properties International</span> is the trusted source and number one choice for property acquisition across a range of global markets.
             </h1>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors flex items-center mx-auto">
+            <Link 
+              to="/portfolio"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors flex items-center mx-auto"
+            >
               VIEW OUR FULL PROPERTY PORTFOLIO
               <ChevronRight className="ml-2 w-5 h-5" />
-            </button>
+            </Link>
           </div>
         </div>
         
@@ -138,7 +143,7 @@ function App() {
             </div>
           </div>
         </div>
-</section>
+      </section>
 
       {/* Portfolio Section */}
       <div id="portfolio">
@@ -173,8 +178,9 @@ function App() {
           </div>
         </div>
       </section>
-{/* Email Subscription Section */}
-     <section className="py-16 bg-green-50">
+
+      {/* Email Subscription Section */}
+      <section className="py-16 bg-green-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-lg shadow-lg p-8 md:p-12">
@@ -215,6 +221,7 @@ function App() {
           </div>
         </div>
       </section>
+
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
@@ -235,136 +242,136 @@ function App() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2 text-gray-300">
-                <li><a href="#" className="hover:text-green-400 transition-colors">Home</a></li>
-                <li><a href="#" className="hover:text-green-400 transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-green-400 transition-colors">Portfolio</a></li>
-                <li><a href="#" className="hover:text-green-400 transition-colors">Partners</a></li>
-                <li><a href="#" className="hover:text-green-400 transition-colors">Contact</a></li>
+                <li><Link to="/" className="hover:text-green-400 transition-colors">Home</Link></li>
+                <li><Link to="/about" className="hover:text-green-400 transition-colors">About Us</Link></li>
+                <li><Link to="/portfolio" className="hover:text-green-400 transition-colors">Portfolio</Link></li>
+                <li><Link to="/partners" className="hover:text-green-400 transition-colors">Partners</Link></li>
+                <li><Link to="/contact" className="hover:text-green-400 transition-colors">Contact</Link></li>
               </ul>
             </div>
             <div>
-           <div>                                       
-<h4 className="text-lg font-semibold mb-4">Contact Us</h4>
-<form 
-  action="https://formspree.io/f/xblykgln" 
-  method="POST"
-  className="space-y-3"
->
-  <div>
-    <input 
-      type="text" 
-      name="name"
-      placeholder="Your Name *"
-      required
-      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
-    />
-  </div>
-  
-  <div>
-    <input 
-      type="email" 
-      name="email"
-      placeholder="Your Email *"
-      required
-      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
-    />
-  </div>
-  
-  <div>
-    <input 
-      type="tel" 
-      name="phone"
-      placeholder="Phone Number"
-      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
-    />
-  </div>
+              <div>                                       
+                <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
+                <form 
+                  action="https://formspree.io/f/xblykgln" 
+                  method="POST"
+                  className="space-y-3"
+                >
+                  <div>
+                    <input 
+                      type="text" 
+                      name="name"
+                      placeholder="Your Name *"
+                      required
+                      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
+                    />
+                  </div>
+                  
+                  <div>
+                    <input 
+                      type="email" 
+                      name="email"
+                      placeholder="Your Email *"
+                      required
+                      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
+                    />
+                  </div>
+                  
+                  <div>
+                    <input 
+                      type="tel" 
+                      name="phone"
+                      placeholder="Phone Number"
+                      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
+                    />
+                  </div>
 
-  <div>
-    <select 
-      name="propertyInterest"
-      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
-    >
-      <option value="">I'm interested in...</option>
-      <option value="buying">Buying a Luxury Property</option>
-      <option value="selling">Selling My Property</option>
-      <option value="investing">Investment Opportunities</option>
-      <option value="consultation">General Consultation</option>
-    </select>
-  </div>
+                  <div>
+                    <select 
+                      name="propertyInterest"
+                      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
+                    >
+                      <option value="">I'm interested in...</option>
+                      <option value="buying">Buying a Luxury Property</option>
+                      <option value="selling">Selling My Property</option>
+                      <option value="investing">Investment Opportunities</option>
+                      <option value="consultation">General Consultation</option>
+                    </select>
+                  </div>
 
-  <div>
-    <select 
-      name="budgetRange"
-      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
-    >
-      <option value="">Budget Range (Optional)</option>
-      <option value="under-1m">Under $1M</option>
-      <option value="1m-5m">$1M - $5M</option>
-      <option value="5m-10m">$5M - $10M</option>
-      <option value="10m-25m">$10M - $25M</option>
-      <option value="25m-plus">$25M+</option>
-    </select>
-  </div>
+                  <div>
+                    <select 
+                      name="budgetRange"
+                      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
+                    >
+                      <option value="">Budget Range (Optional)</option>
+                      <option value="under-1m">Under $1M</option>
+                      <option value="1m-5m">$1M - $5M</option>
+                      <option value="5m-10m">$5M - $10M</option>
+                      <option value="10m-25m">$10M - $25M</option>
+                      <option value="25m-plus">$25M+</option>
+                    </select>
+                  </div>
 
-  <div>
-    <select 
-      name="preferredLocation"
-      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
-    >
-      <option value="">Preferred Location</option>
-      <option value="usa">United States</option>
-      <option value="uk">United Kingdom</option>
-      <option value="france">France</option>
-      <option value="uae">UAE/Dubai</option>
-      <option value="singapore">Singapore</option>
-      <option value="other">Other Location</option>
-    </select>
-  </div>
+                  <div>
+                    <select 
+                      name="preferredLocation"
+                      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
+                    >
+                      <option value="">Preferred Location</option>
+                      <option value="usa">United States</option>
+                      <option value="uk">United Kingdom</option>
+                      <option value="france">France</option>
+                      <option value="uae">UAE/Dubai</option>
+                      <option value="singapore">Singapore</option>
+                      <option value="other">Other Location</option>
+                    </select>
+                  </div>
 
-  <div>
-    <select 
-      name="timeline"
-      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
-    >
-      <option value="">Purchase Timeline</option>
-      <option value="immediate">Ready to purchase now</option>
-      <option value="3months">Within 3 months</option>
-      <option value="6months">Within 6 months</option>
-      <option value="1year">Within 1 year</option>
-      <option value="exploring">Just exploring options</option>
-    </select>
-  </div>
-  
-  <div>
-    <textarea 
-      name="message"
-      rows="2"
-      placeholder="Additional details or specific requirements..."
-      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm resize-vertical"
-   ></textarea>
-  </div>
+                  <div>
+                    <select 
+                      name="timeline"
+                      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
+                    >
+                      <option value="">Purchase Timeline</option>
+                      <option value="immediate">Ready to purchase now</option>
+                      <option value="3months">Within 3 months</option>
+                      <option value="6months">Within 6 months</option>
+                      <option value="1year">Within 1 year</option>
+                      <option value="exploring">Just exploring options</option>
+                    </select>
+                  </div>
+                  
+                  <div>
+                    <textarea 
+                      name="message"
+                      rows="2"
+                      placeholder="Additional details or specific requirements..."
+                      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm resize-vertical"
+                   ></textarea>
+                  </div>
 
-  <input type="hidden" name="_subject" value="New Qualified Lead - Holborn Properties" />
-  <input type="hidden" name="_replyto" value="email" />
-  
-  <button 
-    type="submit"
-    className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded transition-colors font-medium text-sm"
-  >
-    Send Message
-  </button>
-</form>
+                  <input type="hidden" name="_subject" value="New Qualified Lead - Holborn Properties" />
+                  <input type="hidden" name="_replyto" value="email" />
+                  
+                  <button 
+                    type="submit"
+                    className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded transition-colors font-medium text-sm"
+                  >
+                    Send Message
+                  </button>
+                </form>
 
-<div className="mt-4 pt-4 border-t border-gray-700">
-  <h5 className="text-sm font-semibold mb-2 text-green-400">Contact Details</h5>
-  <div className="space-y-1 text-xs text-gray-400">
-    <div>USA: +1 239 326 2111</div>
-    <div>UK: +44 (0)161 250 5300</div>
-    <div>info@luxuryinternational.com</div>
-  </div>
-</div>
-</div>
+                <div className="mt-4 pt-4 border-t border-gray-700">
+                  <h5 className="text-sm font-semibold mb-2 text-green-400">Contact Details</h5>
+                  <div className="space-y-1 text-xs text-gray-400">
+                    <div>USA: +1 239 326 2111</div>
+                    <div>UK: +44 (0)161 250 5300</div>
+                    <div>info@luxuryinternational.com</div>
+                  </div>
+                </div>
               </div>
+            </div>
           </div>
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
             <p>&copy; 2025 Holborn Properties International. All rights reserved.</p>
@@ -372,6 +379,20 @@ function App() {
         </div>
       </footer>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/portfolio" element={<FullPortfolioPage />} />
+        <Route path="/about" element={<div>About Page - Coming Soon</div>} />
+        <Route path="/partners" element={<div>Partners Page - Coming Soon</div>} />
+        <Route path="/contact" element={<div>Contact Page - Coming Soon</div>} />
+      </Routes>
+    </Router>
   );
 }
 
