@@ -40,10 +40,10 @@ function HomePage() {
             </a>
             <div className="flex space-x-8">
             <a href="#" className="text-gray-700 hover:text-green-600 transition-colors">Home</a>
-<a href="#" className="text-gray-700 hover:text-green-600 transition-colors">About Us</a>
-<a href="#portfolio" className="text-gray-700 hover:text-green-600 transition-colors">Portfolio</a>
-<a href="#" className="text-gray-700 hover:text-green-600 transition-colors">Partners</a>
-<a href="#" className="text-gray-700 hover:text-green-600 transition-colors">Contact</a>
+            <a href="#" className="text-gray-700 hover:text-green-600 transition-colors">About Us</a>
+            <a href="#portfolio" className="text-gray-700 hover:text-green-600 transition-colors">Portfolio</a>
+            <a href="#" className="text-gray-700 hover:text-green-600 transition-colors">Partners</a>
+            <a href="#" className="text-gray-700 hover:text-green-600 transition-colors">Contact</a>
             </div>
           </nav>
         </div>
