@@ -169,7 +169,7 @@ const Portfolio = () => {
       <footer>
         <div className="container">
           <div className="footer-content">
-            <p>&copy; 2024 Benoit Properties. All rights reserved.</p>
+            <p>&copy; 2025 Holborn Properties. All rights reserved.</p>
           </div>
         </div>
       </footer>
@@ -177,4 +177,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default portfolio;
