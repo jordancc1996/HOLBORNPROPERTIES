@@ -37,7 +37,7 @@ function HomePage() {
           <nav className="flex justify-between items-center py-4">
             <a href="#" className="text-2xl font-bold text-green-600">
               <img src={holbornLogo} alt="Holborn Properties Logo" className="h-12" />
-            </Link>
+            </a>
             <div className="flex space-x-8">
             <a href="#" className="text-gray-700 hover:text-green-600 transition-colors">Home</a>
 <a href="#" className="text-gray-700 hover:text-green-600 transition-colors">About Us</a>
