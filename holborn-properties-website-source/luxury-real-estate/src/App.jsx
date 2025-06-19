@@ -4,6 +4,14 @@ import eiffelTower from './assets/eiffel-tower.jpg';
 import burjKhalifa from './assets/burj-khalifa.jpg';
 import tajMahal from './assets/taj-mahal.jpg';
 import holbornLogo from './assets/holborn-properties-logo.png';
+import React from 'react';
+import './App.css';
+import eiffelTower from './assets/eiffel-tower.jpg';
+import burjKhalifa from './assets/burj-khalifa.jpg';
+import tajMahal from './assets/taj-mahal.jpg';
+import holbornLogo from './assets/holborn-properties-logo.png';
+import { Phone, Mail, MapPin, ChevronRight } from 'lucide-react';
+import Portfolio from './components/ui/portfolio'; // ADD THIS LINE
 import { Phone, Mail, MapPin, ChevronRight } from 'lucide-react';
 
 function App() {
@@ -37,7 +45,7 @@ function App() {
             <div className="flex space-x-8">
               <a href="#" className="text-gray-700 hover:text-green-600 transition-colors">Home</a>
               <a href="#" className="text-gray-700 hover:text-green-600 transition-colors">About Us</a>
-              <a href="#" className="text-gray-700 hover:text-green-600 transition-colors">Portfolio</a>
+             <a href="#portfolio" className="text-gray-700 hover:text-green-600 transition-colors">Portfolio</a>
               <a href="#" className="text-gray-700 hover:text-green-600 transition-colors">Partners</a>
               <a href="#" className="text-gray-700 hover:text-green-600 transition-colors">Contact</a>
             </div>
@@ -138,6 +146,12 @@ function App() {
           </div>
         </div>
       </section>
+</section>
+
+      {/* Portfolio Section */}
+      <div id="portfolio">
+        <Portfolio />
+      </div>
 
       {/* About Section */}
       <section className="py-16 bg-white">
