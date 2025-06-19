@@ -190,45 +190,43 @@ function HomePage() {
         </div>
       </section>
 
-
-      {/* Email Subscription Section - FIXED VERSION */}
-      <section className="py-20 bg-gradient-to-br from-green-50 to-blue-50">
+      {/* Email Subscription Section */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-16 border border-gray-100">
-              <div className="text-center mb-12">
-                <h2 className="text-4xl md:text-5xl font-light mb-6 text-gray-800 leading-tight">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h2 className="text-3xl font-light text-gray-800">
                   Let us keep you updated with the latest properties on the market.
                 </h2>
-                <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                  Be the first to know about exclusive luxury properties, market insights, and investment opportunities from our global portfolio.
-                </p>
               </div>
-              
-              <div className="max-w-2xl mx-auto">
+              <div>
                 <form 
                   action="https://formspree.io/f/xblykgln" 
                   method="POST"
-                  className="flex flex-col sm:flex-row gap-4"
+                  className="flex gap-0"
                 >
-                  <div className="flex-1">
-                    <input 
-                      type="email" 
-                      name="email"
-                      placeholder="Enter your email address"
-                      required
-                      className="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all duration-300 text-lg placeholder-gray-400"
-                    />
-                  </div>
+                  <input 
+                    type="email" 
+                    name="email"
+                    placeholder="Enter your email here"
+                    required
+                    className="flex-1 px-4 py-3 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-gray-400 text-base bg-gray-100"
+                  />
                   <input type="hidden" name="_subject" value="New Property Newsletter Signup" />
                   <button 
                     type="submit"
-                    className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-8 py-4 rounded-xl transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center"
+                    className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-r-lg transition-colors font-medium text-base"
                   >
                     SUBSCRIBE
-                    <ChevronRight className="ml-2 w-5 h-5" />
                   </button>
                 </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
                 
                 <p className="text-sm text-gray-500 text-center mt-6">
                   We respect your privacy. Unsubscribe at any time.
