@@ -176,4 +176,4 @@ const Portfolio = () => {
   );
 };
 
-export default portfolio;
+export default Portfolio;
