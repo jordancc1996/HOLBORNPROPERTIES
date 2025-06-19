@@ -146,11 +146,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Portfolio Section */}
-      <div id="portfolio">
-        <Portfolio />
-      </div>
-
       {/* About Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
