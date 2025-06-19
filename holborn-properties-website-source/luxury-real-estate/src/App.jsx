@@ -371,4 +371,15 @@ function HomePage() {
   );
 }
 
+function App() {
+  return (
+    // No Router wrapper needed - it's already in main.jsx
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/portfolio" element={<FullPortfolioPage />} />
+    </Routes>
+  );
+}
+
+
 
