@@ -35,15 +35,15 @@ function HomePage() {
           
           {/* Main navigation */}
           <nav className="flex justify-between items-center py-4">
-            <Link to="/" className="text-2xl font-bold text-green-600">
+            <a href="#" className="text-2xl font-bold text-green-600">
               <img src={holbornLogo} alt="Holborn Properties Logo" className="h-12" />
             </Link>
             <div className="flex space-x-8">
-              <Link to="/" className="text-gray-700 hover:text-green-600 transition-colors">Home</Link>
-              <Link to="/about" className="text-gray-700 hover:text-green-600 transition-colors">About Us</Link>
-              <Link to="/portfolio" className="text-gray-700 hover:text-green-600 transition-colors">Portfolio</Link>
-              <Link to="/partners" className="text-gray-700 hover:text-green-600 transition-colors">Partners</Link>
-              <Link to="/contact" className="text-gray-700 hover:text-green-600 transition-colors">Contact</Link>
+            <a href="#" className="text-gray-700 hover:text-green-600 transition-colors">Home</a>
+<a href="#" className="text-gray-700 hover:text-green-600 transition-colors">About Us</a>
+<a href="#portfolio" className="text-gray-700 hover:text-green-600 transition-colors">Portfolio</a>
+<a href="#" className="text-gray-700 hover:text-green-600 transition-colors">Partners</a>
+<a href="#" className="text-gray-700 hover:text-green-600 transition-colors">Contact</a>>
             </div>
           </nav>
         </div>
@@ -63,13 +63,13 @@ function HomePage() {
             <h1 className="text-5xl md:text-6xl font-light mb-6">
               Established in 2006, <span className="font-bold">Holborn Properties International</span> is the trusted source and number one choice for property acquisition across a range of global markets.
             </h1>
-            <Link 
-              to="/portfolio"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors flex items-center mx-auto"
-            >
-              VIEW OUR FULL PROPERTY PORTFOLIO
-              <ChevronRight className="ml-2 w-5 h-5" />
-            </Link>
+            <a 
+  href="#portfolio"
+  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors flex items-center mx-auto"
+>
+  VIEW OUR FULL PROPERTY PORTFOLIO
+  <ChevronRight className="ml-2 w-5 h-5" />
+</a>
           </div>
         </div>
         
@@ -243,11 +243,11 @@ function HomePage() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2 text-gray-300">
-                <li><Link to="/" className="hover:text-green-400 transition-colors">Home</Link></li>
-                <li><Link to="/about" className="hover:text-green-400 transition-colors">About Us</Link></li>
-                <li><Link to="/portfolio" className="hover:text-green-400 transition-colors">Portfolio</Link></li>
-                <li><Link to="/partners" className="hover:text-green-400 transition-colors">Partners</Link></li>
-                <li><Link to="/contact" className="hover:text-green-400 transition-colors">Contact</Link></li>
+               <li><a href="#" className="hover:text-green-400 transition-colors">Home</a></li>
+<li><a href="#" className="hover:text-green-400 transition-colors">About Us</a></li>
+<li><a href="#portfolio" className="hover:text-green-400 transition-colors">Portfolio</a></li>
+<li><a href="#" className="hover:text-green-400 transition-colors">Partners</a></li>
+<li><a href="#" className="hover:text-green-400 transition-colors">Contact</a></li>
               </ul>
             </div>
             <div>
