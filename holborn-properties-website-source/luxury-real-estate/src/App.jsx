@@ -1,4 +1,3 @@
-// Force rebuild - Router implementation
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
@@ -35,15 +34,15 @@ function HomePage() {
           
           {/* Main navigation */}
           <nav className="flex justify-between items-center py-4">
-            <a href="#" className="text-2xl font-bold text-green-600">
+            <Link to="/" className="text-2xl font-bold text-green-600">
               <img src={holbornLogo} alt="Holborn Properties Logo" className="h-12" />
-            </a>
+            </Link>
             <div className="flex space-x-8 gap-8">
-            <Link to="/portfolio" className="text-gray-700 hover:text-green-600 transition-colors mr-8">Portfolio</Link>
-            <a href="#" className="text-gray-700 hover:text-green-600 transition-colors mr-8">About Us</a>
-            <a href="#portfolio" className="text-gray-700 hover:text-green-600 transition-colors mr-8">Portfolio</a>
-            <a href="#" className="text-gray-700 hover:text-green-600 transition-colors mr-8">Partners</a>
-            <a href="#" className="text-gray-700 hover:text-green-600 transition-colors">Contact</a>
+              <Link to="/" className="text-gray-700 hover:text-green-600 transition-colors">Home</Link>
+              <a href="#" className="text-gray-700 hover:text-green-600 transition-colors">About Us</a>
+              <Link to="/portfolio" className="text-gray-700 hover:text-green-600 transition-colors">Portfolio</Link>
+              <a href="#" className="text-gray-700 hover:text-green-600 transition-colors">Partners</a>
+              <a href="#" className="text-gray-700 hover:text-green-600 transition-colors">Contact</a>
             </div>
           </nav>
         </div>
@@ -63,13 +62,13 @@ function HomePage() {
             <h1 className="text-5xl md:text-6xl font-light mb-6">
               Established in 2006, <span className="font-bold">Holborn Properties International</span> is the trusted source and number one choice for property acquisition across a range of global markets.
             </h1>
-            <a 
-  href="#portfolio"
-  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors flex items-center mx-auto"
->
-  VIEW OUR FULL PROPERTY PORTFOLIO
-  <ChevronRight className="ml-2 w-5 h-5" />
-</a>
+            <Link 
+              to="/portfolio"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors flex items-center mx-auto"
+            >
+              VIEW OUR FULL PROPERTY PORTFOLIO
+              <ChevronRight className="ml-2 w-5 h-5" />
+            </Link>
           </div>
         </div>
         
@@ -166,24 +165,20 @@ function HomePage() {
         </div>
       </section>
 
-      {/* As Seen In Section - FIXED VERSION */}
+      {/* As Seen In Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-light text-center mb-12 text-gray-800">As Seen In</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center max-w-6xl mx-auto">
-            <div className="text-lg md:text-xl font-bold text-gray-500 hover:text-gray-700 transition-colors text-center">
-              GQ
-            </div>
-            <div className="text-sm md:text-base font-bold text-gray-500 hover:text-gray-700 transition-colors text-center leading-tight">
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 max-w-6xl mx-auto">
+            <div className="text-lg font-semibold text-gray-600">GQ</div>
+            <div className="text-lg font-semibold text-gray-600 text-center">
               ARCHITECTURAL<br />DIGEST
             </div>
-            <div className="text-xs md:text-sm font-bold text-gray-500 hover:text-gray-700 transition-colors text-center leading-tight">
+            <div className="text-lg font-semibold text-gray-600 text-center">
               INTERNATIONAL<br />PROPERTY &<br />TRAVEL
             </div>
-            <div className="text-lg md:text-xl font-bold text-gray-500 hover:text-gray-700 transition-colors text-center">
-              TATLER
-            </div>
-            <div className="text-sm md:text-base font-bold text-gray-500 hover:text-gray-700 transition-colors text-center leading-tight col-span-2 md:col-span-1">
+            <div className="text-lg font-semibold text-gray-600">TATLER</div>
+            <div className="text-lg font-semibold text-gray-600 text-center">
               FINANCIAL<br />TIMES
             </div>
           </div>
@@ -247,139 +242,128 @@ function HomePage() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2 text-gray-300">
-               <li><a href="#" className="hover:text-green-400 transition-colors">Home</a></li>
-<li><a href="#" className="hover:text-green-400 transition-colors">About Us</a></li>
-<li><a href="#portfolio" className="hover:text-green-400 transition-colors">Portfolio</a></li>
-<li><a href="#" className="hover:text-green-400 transition-colors">Partners</a></li>
-<li><a href="#" className="hover:text-green-400 transition-colors">Contact</a></li>
+                <li><Link to="/" className="hover:text-green-400 transition-colors">Home</Link></li>
+                <li><a href="#" className="hover:text-green-400 transition-colors">About Us</a></li>
+                <li><Link to="/portfolio" className="hover:text-green-400 transition-colors">Portfolio</Link></li>
+                <li><a href="#" className="hover:text-green-400 transition-colors">Partners</a></li>
+                <li><a href="#" className="hover:text-green-400 transition-colors">Contact</a></li>
               </ul>
             </div>
             <div>
-              <div>                                       
-                <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
-                <form 
-                  action="https://formspree.io/f/xblykgln" 
-                  method="POST"
-                  className="space-y-3"
-                >
-                  <div>
-                    <input 
-                      type="text" 
-                      name="name"
-                      placeholder="Your Name *"
-                      required
-                      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
-                    />
-                  </div>
-                  
-                  <div>
-                    <input 
-                      type="email" 
-                      name="email"
-                      placeholder="Your Email *"
-                      required
-                      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
-                    />
-                  </div>
-                  
-                  <div>
-                    <input 
-                      type="tel" 
-                      name="phone"
-                      placeholder="Phone Number"
-                      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
-                    />
-                  </div>
-
-                  <div>
-                    <select 
-                      name="propertyInterest"
-                      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
-                    >
-                      <option value="">I'm interested in...</option>
-                      <option value="buying">Buying a Luxury Property</option>
-                      <option value="selling">Selling My Property</option>
-                      <option value="investing">Investment Opportunities</option>
-                      <option value="consultation">General Consultation</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <select 
-                      name="budgetRange"
-                      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
-                    >
-                      <option value="">Budget Range (Optional)</option>
-                      <option value="under-1m">Under $1M</option>
-                      <option value="1m-5m">$1M - $5M</option>
-                      <option value="5m-10m">$5M - $10M</option>
-                      <option value="10m-25m">$10M - $25M</option>
-                      <option value="25m-plus">$25M+</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <select 
-                      name="preferredLocation"
-                      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
-                    >
-                      <option value="">Preferred Location</option>
-                      <option value="usa">United States</option>
-                      <option value="uk">United Kingdom</option>
-                      <option value="france">France</option>
-                      <option value="uae">UAE/Dubai</option>
-                      <option value="singapore">Singapore</option>
-                      <option value="other">Other Location</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <select 
-                      name="timeline"
-                      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
-                    >
-                      <option value="">Purchase Timeline</option>
-                      <option value="immediate">Ready to purchase now</option>
-                      <option value="3months">Within 3 months</option>
-                      <option value="6months">Within 6 months</option>
-                      <option value="1year">Within 1 year</option>
-                      <option value="exploring">Just exploring options</option>
-                    </select>
-                  </div>
-                  
-                  <div>
-                    <textarea 
-                      name="message"
-                      rows="2"
-                      placeholder="Additional details or specific requirements..."
-                      className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm resize-vertical"
-                   ></textarea>
-                  </div>
-
-                  <input type="hidden" name="_subject" value="New Qualified Lead - Holborn Properties" />
-                  <input type="hidden" name="_replyto" value="email" />
-                  
-                  <button 
-                    type="submit"
-                    className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded transition-colors font-medium text-sm"
-                  >
-                    Send Message
-                  </button>
-                </form>
-
-                <div className="mt-4 pt-4 border-t border-gray-700">
-                  <h5 className="text-sm font-semibold mb-2 text-green-400">Contact Details</h5>
-                  <div className="space-y-1 text-xs text-gray-400">
-                    <div>USA: +1 239 326 2111</div>
-                    <div>UK: +44 (0)161 250 5300</div>
-                    <div>info@luxuryinternational.com</div>
-                  </div>
+              <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
+              <form 
+                action="https://formspree.io/f/xblykgln" 
+                method="POST"
+                className="space-y-3"
+              >
+                <div>
+                  <input 
+                    type="text" 
+                    name="name"
+                    placeholder="Your Name *"
+                    required
+                    className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
+                  />
                 </div>
+                
+                <div>
+                  <input 
+                    type="email" 
+                    name="email"
+                    placeholder="Your Email *"
+                    required
+                    className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
+                  />
+                </div>
+                
+                <div>
+                  <input 
+                    type="tel" 
+                    name="phone"
+                    placeholder="Phone Number"
+                    className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
+                  />
+                </div>
+
+                <div>
+                  <select 
+                    name="propertyInterest"
+                    className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
+                  >
+                    <option value="">I'm interested in...</option>
+                    <option value="buying">Buying a Luxury Property</option>
+                    <option value="selling">Selling My Property</option>
+                    <option value="investing">Investment Opportunities</option>
+                    <option value="consultation">General Consultation</option>
+                  </select>
+                </div>
+
+                <div>
+                  <select 
+                    name="budgetRange"
+                    className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
+                  >
+                    <option value="">Budget Range (Optional)</option>
+                    <option value="under-1m">Under $1M</option>
+                    <option value="1m-5m">$1M - $5M</option>
+                    <option value="5m-10m">$5M - $10M</option>
+                    <option value="10m-25m">$10M - $25M</option>
+                    <option value="25m-plus">$25M+</option>
+                  </select>
+                </div>
+
+                <div>
+                  <select 
+                    name="preferredLocation"
+                    className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
+                  >
+                    <option value="">Preferred Location</option>
+                    <option value="usa">United States</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="france">France</option>
+                    <option value="uae">UAE/Dubai</option>
+                    <option value="singapore">Singapore</option>
+                    <option value="other">Other Location</option>
+                  </select>
+                </div>
+
+                <div>
+                  <select 
+                    name="purchaseTimeline"
+                    className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
+                  >
+                    <option value="">Purchase Timeline</option>
+                    <option value="now">Ready to purchase now</option>
+                    <option value="3months">Within 3 months</option>
+                    <option value="6months">Within 6 months</option>
+                    <option value="1year">Within 1 year</option>
+                    <option value="exploring">Just exploring options</option>
+                  </select>
+                </div>
+
+                <div>
+                  <textarea 
+                    name="message"
+                    placeholder="Additional details or specific requirements..."
+                    rows="3"
+                    className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm resize-none"
+                  ></textarea>
+                </div>
+
+                <button 
+                  type="submit"
+                  className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded transition-colors font-medium text-sm"
+                >
+                  Send Message
+                </button>
+              </form>
+              
+              <div className="mt-6 text-center">
+                <h5 className="text-green-400 font-semibold mb-2">Contact Details</h5>
+                <p className="text-gray-300 text-sm">USA: +1 215 252 0312</p>
+                <p className="text-gray-300 text-sm">UK: +1 215 252 0312</p>
               </div>
             </div>
-          </div>
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 Holborn Properties International. All rights reserved.</p>
           </div>
         </div>
       </footer>
@@ -387,8 +371,16 @@ function HomePage() {
   );
 }
 
+// MAIN APP COMPONENT WITH ROUTING
 function App() {
-  return <HomePage />;
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/portfolio" element={<FullPortfolioPage />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
