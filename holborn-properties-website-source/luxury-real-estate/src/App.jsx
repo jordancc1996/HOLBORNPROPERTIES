@@ -1,6 +1,6 @@
 // Force rebuild - Router implementation
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+// import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import eiffelTower from './assets/eiffel-tower.jpg';
 import burjKhalifa from './assets/burj-khalifa.jpg';
