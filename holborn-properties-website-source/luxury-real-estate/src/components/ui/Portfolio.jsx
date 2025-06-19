@@ -103,7 +103,7 @@ const Portfolio = () => {
     <div className="portfolio-page">
       <header>
         <nav className="container">
-          <a href="#" className="logo">Benoit Properties</a>
+          <a href="#" className="logo">Holborn Properties</a>
           <ul className="nav-menu">
             <li><a href="#home" onClick={(e) => handleSmoothScroll(e, '#home')}>Home</a></li>
             <li><a href="#portfolio" onClick={(e) => handleSmoothScroll(e, '#portfolio')}>Portfolio</a></li>
@@ -119,7 +119,7 @@ const Portfolio = () => {
           <div className="page-header">
             <h1 className="page-title">Featured Properties</h1>
             <p className="page-subtitle">
-              Benoit Properties are proud to offer the strongest international real estate opportunities, 
+              Holborn Properties are proud to offer the strongest international real estate opportunities, 
               in collaboration with some of the world's leading property development companies. 
               Explore our curated property portfolio below.
             </p>
